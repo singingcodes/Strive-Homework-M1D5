@@ -36,7 +36,7 @@ function crazySum(integer1, integer2) {
 */
 
 let crazyDiff = (number1) => {
-  let difference = number1 - 19;
+  let difference = Math.abs(number1 - 19);
   if (number1 > 19) {
     return difference * 3;
   } else {
@@ -47,12 +47,13 @@ let crazyDiff = (number1) => {
 /* EXERCISE 4
  Write a function called "boundary" which accept an integer parameter n and returns true if n is within 20 and 100 (included) or if n it's equal to 400.
 */
-let n = 3;
+
 function boundary(n) {
-  if (n <= 20 || n <= 100 || n === 400) {
+  if ((n >= 20 && n <= 100) || n === 400) {
     return true;
   } else return false;
 }
+console.log(boundary(3));
 
 /* EXERCISE 5
  Write a function called "strivify" which accepts a string as a parameter.
@@ -61,13 +62,13 @@ function boundary(n) {
 function strivify(param1) {
   let striveParam = "";
   if (striveParam.startsWith("Strive", 0)) {
-    console.log(param1);
+    // console.log(param1);
   } else {
-    console.log("Strive " + param1);
+    // console.log("Strive " + param1);
   }
 }
 let strive = strivify("Sarah");
-console.log(strive);
+//console.log(strive);
 /* EXERCISE 6
  Write a function called "check3and7" which accepts a positive number as a parameter and checks if it is a multiple of 3 or a multiple of 7.
  HINT: Modulus Operator
@@ -80,7 +81,7 @@ function check3and7(y) {
     return false;
   }
 }
-let answer = check3and7(21);
+//let answer = check3and7(21);
 
 //console.log(answer);
 
@@ -95,7 +96,7 @@ function reverseString(str) {
   return newString;
 }
 let reverse = reverseString("strive");
-console.log(reverse);
+//console.log(reverse);
 /* EXERCISE 8
  Write a function called "upperFirst" which capitalizes the first letter of each word of a given string passed as a parameter.
 */
@@ -108,7 +109,7 @@ function upperFirst(words) {
   }
   return separateWord.join(" ");
 }
-console.log(upperFirst("This is strive school"));
+//console.log(upperFirst("This is strive school"));
 
 /* EXERCISE 9
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
