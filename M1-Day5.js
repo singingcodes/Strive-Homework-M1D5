@@ -60,11 +60,10 @@ console.log(boundary(3));
  It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 function strivify(param1) {
-  let striveParam = "";
-  if (striveParam.startsWith("Strive", 0)) {
-    // console.log(param1);
+  if (param1.startsWith("Strive")) {
+    return param1;
   } else {
-    // console.log("Strive " + param1);
+    return "Strive " + param1;
   }
 }
 let strive = strivify("Sarah");
@@ -74,8 +73,8 @@ let strive = strivify("Sarah");
  HINT: Modulus Operator
 */
 
-function check3and7(y) {
-  if (y % 3 === 0 || y % 7 === 0) {
+function check3and7(n) {
+  if (n >= 0 && (n % 3 === 0 || n % 7 === 0)) {
     return true;
   } else {
     return false;
@@ -115,13 +114,24 @@ function upperFirst(words) {
  Write a function called "cutString" which creates a new string without the first and last character of a given string passed as a parameter.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function cutString(str) {
+  return str.slice(1, -1);
+}
+let cutStringResult = cutString("Sarah");
+console.log(cutStringResult);
 
 /* EXERCISE 10
  Write a function called "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR ANSWER HERE */
+function giveMeRandom(y) {
+  let randomNumbers = [];
+  for (let i = 0; i <= y; i++) {
+    randomNumbers.push(Math.floor(Math.random() * 10));
+  }
+  return randomNumbers;
+}
+console.log(giveMeRandom(6));
 
 /* WHEN YOU ARE FINISHED
  Commit and push the code to your personal GitHub repository; then post the link of your commit on the Homework section of today's Eduflow.
